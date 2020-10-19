@@ -246,7 +246,8 @@ configs:
         # k8s_node_selector: |-
           # cloud.google.com/gke-nodepool: good-pool
     handling:
-      assign: db-skip-locked
+      assign:
+        - "db-skip-locked"
     execution:
       default: dynamic_k8s_dispatcher
       environments:
