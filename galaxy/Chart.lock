@@ -1,9 +1,0 @@
-dependencies:
-- name: postgres-operator
-  repository: https://raw.githubusercontent.com/zalando/postgres-operator/master/charts/postgres-operator/
-  version: 1.6.2
-- name: galaxy-cvmfs-csi
-  repository: https://raw.githubusercontent.com/cloudve/helm-charts/master/
-  version: 1.6.0
-digest: sha256:2c3194a295711dede0db0ebe60300df55e5b24af6075ed41f766b44649beb783
-generated: "2021-06-01T14:14:45.970629+02:00"

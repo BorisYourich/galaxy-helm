@@ -10,9 +10,10 @@ defaultNamespace: gtest
 # Default: ""
 
 helm:
+  chart: https://github.com/CloudVE/helm-charts/blob/master/charts/galaxy-4.1.1.tgz
   releaseName: galaxy-test
   valuesFiles:
-    - values.yaml
+    - galaxy/values.yaml
   force: false
 
 targetCustomizations:
