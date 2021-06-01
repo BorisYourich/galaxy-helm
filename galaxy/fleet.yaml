@@ -13,7 +13,7 @@ helm:
   chart: https://github.com/CloudVE/helm-charts/raw/master/charts/galaxy-4.1.1.tgz
   releaseName: galaxy-test
   valuesFiles:
-    - galaxy/values.yaml
+    - values.yaml
   force: false
 
 targetCustomizations:

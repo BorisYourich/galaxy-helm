@@ -1,0 +1,6 @@
+defaultNamespace: gtest
+helm:
+  releaseName: postgres-crd
+  chart: https://github.com/zalando/postgres-operator/raw/master/charts/postgres-operator/postgres-operator-1.6.2.tgz
+  valuesFiles:
+    - values.yaml
