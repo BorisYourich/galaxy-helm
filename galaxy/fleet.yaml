@@ -8,7 +8,6 @@ defaultNamespace: gtest
 # All resources will be assigned to this namespace and if any cluster scoped
 # resource exists the deployment will fail.
 # Default: ""
-namespace: gtest
 
 helm:
   releaseName: galaxy-test
