@@ -3,7 +3,6 @@
 # provide the default value of the namespace field if one is not specified
 # in the manifests.
 # Default: default
-defaultNamespace: gtest
 
 # All resources will be assigned to this namespace and if any cluster scoped
 # resource exists the deployment will fail.
@@ -11,13 +10,23 @@ defaultNamespace: gtest
 
 helm:
   chart: https://github.com/CloudVE/helm-charts/raw/master/charts/galaxy-4.1.1.tgz
-  releaseName: galaxy-test
-  valuesFiles:
-    - values.yaml
+  releaseName: galaxy-fleet
   force: false
 
 targetCustomizations:
 - name: test
-  yaml:
-    overlays:
-    - custom
+  namespace: gtest
+  helm:
+    valuesFiles:
+      - values-test.yaml
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-name: c-mdv22
+- name: prod
+  namespace: galaxy-prod-ns
+  helm:
+    valuesFiles:
+      - values-prod.yaml
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-name: c-qgxlf
