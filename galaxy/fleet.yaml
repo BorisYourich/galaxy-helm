@@ -4,7 +4,6 @@
 # in the manifests.
 # Default: default
 
-defaultNamespace: galaxy
 # All resources will be assigned to this namespace and if any cluster scoped
 # resource exists the deployment will fail.
 # Default: ""
@@ -16,7 +15,7 @@ helm:
 
 targetCustomizations:
 - name: test
-  namespace: gtest
+  defaultNamespace: gtest
   helm:
     valuesFiles:
       - values-test.yaml
@@ -24,7 +23,7 @@ targetCustomizations:
     matchLabels:
       management.cattle.io/cluster-name: c-mdv22
 - name: prod
-  namespace: galaxy-prod-ns
+  defaultNamespace: galaxy-prod-ns
   helm:
     valuesFiles:
       - values-prod.yaml
