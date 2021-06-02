@@ -188,7 +188,7 @@ extraEnv: []
 ingress:
   enabled: true
   canary:
-    enabled: true
+    enabled: false
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "10G"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
