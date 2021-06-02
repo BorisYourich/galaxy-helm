@@ -4,6 +4,7 @@
 # in the manifests.
 # Default: default
 
+defaultNamespace: galaxy
 # All resources will be assigned to this namespace and if any cluster scoped
 # resource exists the deployment will fail.
 # Default: ""
