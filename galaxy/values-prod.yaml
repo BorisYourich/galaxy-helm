@@ -131,7 +131,7 @@ extraVolumeMounts:
       mountPath: /mnt 
 
 initJob:
-  createDatabase: true
+  createDatabase: false
   downloadToolConfs:
     enabled: true
     # Uses Galaxy's shared file system volume
