@@ -371,6 +371,8 @@ configs:
         {{- end }}
       tool_dependency_dir: "{{.Values.persistence.mountPath}}/deps"
       job_config_file: "/galaxy/server/config/job_conf.yml"
+      file_sources_config_file: "/galaxy/server/config/file_sources_conf.yml.sample"
+      user_preferences_extra_conf_path: "/galaxy/server/config/user_preferences_extra_conf.yml.sample"
       builds_file_path: |-
         {{ if .Values.cvmfs.enabled }}
         {{ .Values.cvmfs.galaxyPersistentVolumeClaims.data.mountPath}}/managed/location/builds.txt
