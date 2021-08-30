@@ -14,14 +14,6 @@ helm:
   force: false
 
 targetCustomizations:
-- name: test
-  defaultNamespace: gtest
-  helm:
-    valuesFiles:
-      - values-test.yaml
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-name: c-mdv22
 - name: prod
   defaultNamespace: galaxy-prod-ns
   helm:
@@ -29,4 +21,4 @@ targetCustomizations:
       - values-prod.yaml
   clusterSelector:
     matchLabels:
-      management.cattle.io/cluster-name: c-qgxlf
+      management.cattle.io/cluster-name: c-bl26v
