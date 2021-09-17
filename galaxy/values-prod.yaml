@@ -371,6 +371,7 @@ configs:
         {{- .Values.cvmfs.galaxyPersistentVolumeClaims.data.mountPath}}/managed/location/tool_data_table_conf.xml,{{.Values.cvmfs.galaxyPersistentVolumeClaims.data.mountPath}}/byhand/location/tool_data_table_conf.xml
         {{- end }}
         {{- end }}
+      library_import_dir: /
       tool_dependency_dir: "{{.Values.persistence.mountPath}}/deps"
       job_config_file: "/galaxy/server/config/job_conf.yml"
       builds_file_path: |-
